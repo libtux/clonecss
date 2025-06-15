@@ -1,0 +1,42 @@
+/* styles.css - własne utility classes */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Kolory tła */
+.bg-blue { background-color: #3b82f6; }
+.bg-red { background-color: #ef4444; }
+.bg-green { background-color: #10b981; }
+
+/* Kolory tekstu */
+.text-white { color: #ffffff; }
+.text-black { color: #000000; }
+
+/* Marginesy */
+.m-1 { margin: 0.25rem; }
+.m-2 { margin: 0.5rem; }
+.m-4 { margin: 1rem; }
+
+/* Padding */
+.p-1 { padding: 0.25rem; }
+.p-2 { padding: 0.5rem; }
+.p-4 { padding: 1rem; }
+
+/* Tekst */
+.text-center { text-align: center; }
+.text-lg { font-size: 1.25rem; }
+.font-bold { font-weight: bold; }
+
+/* Inne */
+.rounded { border-radius: 0.25rem; }
+.shadow { box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+.centered-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
