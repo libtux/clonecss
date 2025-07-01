@@ -1,42 +1,281 @@
-/* styles.css - własne utility classes */
+/* styles.css */
 
-/* Reset */
-* {
+/* Resetowanie domyślnych stylów */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Kolory tła */
-.bg-blue { background-color: #3b82f6; }
-.bg-red { background-color: #ef4444; }
-.bg-green { background-color: #10b981; }
+html {
+  font-size: 16px;
+}
 
-/* Kolory tekstu */
-.text-white { color: #ffffff; }
-.text-black { color: #000000; }
+/* Kolory podstawowe */
+.bg-primary {
+  background-color: #3498db;
+}
 
-/* Marginesy */
-.m-1 { margin: 0.25rem; }
-.m-2 { margin: 0.5rem; }
-.m-4 { margin: 1rem; }
+.bg-secondary {
+  background-color: #2ecc71;
+}
 
-/* Padding */
-.p-1 { padding: 0.25rem; }
-.p-2 { padding: 0.5rem; }
-.p-4 { padding: 1rem; }
+.bg-light {
+  background-color: #f8f9fa;
+}
 
-/* Tekst */
-.text-center { text-align: center; }
-.text-lg { font-size: 1.25rem; }
-.font-bold { font-weight: bold; }
+.text-primary {
+  color: #3498db;
+}
 
-/* Inne */
-.rounded { border-radius: 0.25rem; }
-.shadow { box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
-.centered-div {
+.text-secondary {
+  color: #2ecc71;
+}
+
+.text-light {
+  color: #f8f9fa;
+}
+
+/* Skala szerokości */
+.w-full {
+  width: 100%;
+}
+
+.w-12 {
+  width: 50%;
+}
+
+.w-13 {
+  width: 33.33%;
+}
+
+.w-14 {
+  width: 25%;
+}
+
+.w-15 {
+  width: 20%;
+}
+
+/* Skala wysokości */
+.h-full {
+  height: 100%;
+}
+
+.h-12 {
+  height: 50%;
+}
+
+.h-13 {
+  height: 33.33%;
+}
+
+.h-14 {
+  height: 25%;
+}
+
+/* Marginesy i padding */
+.m-4 {
+  margin: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
+/* Typografia */
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.text-3xl {
+  font-size: 2rem;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Border */
+.border {
+  border: 1px solid #ccc;
+}
+
+.border-2 {
+  border: 2px solid #ccc;
+}
+
+.border-primary {
+  border: 2px solid #3498db;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.rounded-lg {
+  border-radius: 16px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+/* Shadows */
+.shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-xl {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Flexbox */
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* Gradienty */
+.bg-gradient-primary {
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(45deg, #e74c3c, #f39c12);
+}
+
+/* Transitions i Animacje */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.hover\:scale-110:hover {
+  transform: scale(1.1);
+}
+
+.hover\:bg-secondary:hover {
+  background-color: #2ecc71;
+}
+
+/* Zmiana koloru tekstu na hover */
+.hover\:text-primary:hover {
+  color: #3498db;
+}
+
+/* Opacity */
+.opacity-90 {
+  opacity: 0.9;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-25 {
+  opacity: 0.25;
+}
+
+/* Z-index */
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+/* Pseudo-elementy */
+.before\:content {
+  content: " ";
+}
+
+.before\:absolute {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+}
+
+.after\:content {
+  content: " ";
+}
+
+.after\:absolute {
+  position: absolute;
 }
